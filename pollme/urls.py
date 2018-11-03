@@ -19,5 +19,7 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.current_datetime, name='current_datetime')
+    path('time/', views.current_datetime, name='current_datetime'),
+    path('', views.home, name='home'),
+
 ]
