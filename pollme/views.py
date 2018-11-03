@@ -8,9 +8,9 @@ def current_datetime(request):
     return HttpResponse(html)
 
 def home(request):
-
+	now = datetime.datetime.now()
 	context = {
-
+	'now': now
 	}
 	return render(request, 'home.html', context)
 
