@@ -3,7 +3,10 @@ from django.http import HttpResponse
 
 
 def polls_list(request):
-	return HttpResponse("<h1> polls_list page </h1>")
+	context = {
+	
+	}
+	return render(request, 'polls/polls_list.html', context)
 
 
 # Create your views here.
