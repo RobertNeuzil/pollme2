@@ -13,7 +13,20 @@
 
 {% for x in polls %}
  <ul>
- 	<li> {{ x }} </li>
+ 	<li> 
+ 	{{ x }} 
+ 	</li>
+ 	
+ 	<ul>
+ 	
+ 	{% for choice in x.choice_set.all %}
+ 	
+ 	<li>
+ 	{{ choice }}
+ 	</li>
+ 	
+ 	{% endfor %}	
+ 	</ul>
  </ul>
 {% endfor %}
 
