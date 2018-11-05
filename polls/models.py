@@ -7,5 +7,5 @@ class Poll(models.Model):
 	pub_date = models.DateField()
 
 	def __str__(self):
-		return f'{self.text[:20]}'
+		return f'{self.text}'
 # Create your models here.

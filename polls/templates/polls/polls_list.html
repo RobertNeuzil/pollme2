@@ -6,7 +6,16 @@
 
 
 {% block content %}
-<h1>
-  Welcome to Polls List
-</h1>
+<div class="container">
+	<h1>
+		Welcome to Polls List!
+	</h1>
+
+{% for x in polls %}
+ <ul>
+ 	<li> {{ x }} </li>
+ </ul>
+{% endfor %}
+
+
 {% endblock %}
