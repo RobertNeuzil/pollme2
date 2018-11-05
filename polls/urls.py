@@ -23,5 +23,7 @@ app_name='polls'
 urlpatterns = [
 
     path('list/', views.polls_list, name='list'),
+    #poll/details/1
+    path('details/<poll_id>/', views.poll_detail, name='detail')
 
 ]
