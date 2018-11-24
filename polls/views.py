@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
 from .models import Poll 
 
 def polls_list(request):
@@ -17,6 +18,15 @@ def polls_list(request):
 
 
 def poll_detail(request, poll_id):
-	return HttpResponse("You're looking for polls with an id of: {}".format(poll_id))
+    """
+    Render the poll_detail.html template which allows a user to vote
+    on the choices of a poll
+    """
+    poll = Poll.objects.get(id=poll_id)
+    
+
+    context = {'poll': poll}
+    return render(request, 'polls/poll_detail.html', context)
+
 
 # Create your views here.

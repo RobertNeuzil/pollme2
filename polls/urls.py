@@ -24,6 +24,6 @@ urlpatterns = [
 
     path('list/', views.polls_list, name='list'),
     #poll/details/1
-    path('details/int:<poll_id>/', views.poll_detail, name='detail')
+    path('details/int:<poll_id>/', views.poll_detail, name='detail'),
 
 ]
